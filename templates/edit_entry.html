@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "base.html" %}
 
 {% block content %}
@@ -27,3 +28,34 @@
 </div>
 
 {% endblock %}
+=======
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="page-title">Edit Entry</h1>
+
+<div class="form-container">
+
+    <form method="POST" class="entry-form">
+
+        <label>Date</label>
+        <input type="date" name="date" value="{{ entry[1] }}" required>
+
+        <label>Weight (kg)</label>
+        <input type="number" name="weight" step="0.1" value="{{ entry[2] }}" required>
+
+        <label>Steps</label>
+        <input type="number" name="steps" value="{{ entry[3] }}" required>
+
+        <label>Water Intake (ml)</label>
+        <input type="number" name="water" value="{{ entry[4] }}" required>
+
+        <button type="submit" class="submit-btn">Update Entry</button>
+
+    </form>
+
+</div>
+
+{% endblock %}
+>>>>>>> e7674ccabe04af7913a4d14d87f184666d3a9002
