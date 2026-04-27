@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker</title>
+
+    <!-- Dynamic Theme Loader -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='themes/' + theme + '.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="/welcome">Home</a>
+            <a href="/signup">Signup</a>
+            <a href="/login">Login</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/add" class="nav-link">Add Entry</a>
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+
+            <!-- THEME SWITCHER -->
+            <div class="theme-switcher">
+                <a href="/theme/minimalist" class="theme-btn">Minimalist</a>
+                <a href="/theme/tailwind" class="theme-btn">Modern</a>
+                <a href="/theme/bootstrap" class="theme-btn">Classic</a>
+                <a href="/theme/dark" class="theme-btn">Dark</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+</html>
