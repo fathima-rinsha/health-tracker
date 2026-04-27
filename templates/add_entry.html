@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="page-title">Add New Health Entry</h1>
+
+<div class="form-container">
+
+    <form method="POST" class="entry-form">
+
+        <label>Date</label>
+        <input type="date" name="date" required>
+
+        <label>Weight (kg)</label>
+        <input type="number" name="weight" step="0.1" placeholder="e.g., 62.5" required>
+
+        <label>Steps</label>
+        <input type="number" name="steps" placeholder="e.g., 8000" required>
+
+        <label>Water Intake (ml)</label>
+        <input type="number" name="water" placeholder="e.g., 2000" required>
+
+        <button type="submit" class="submit-btn">Save Entry</button>
+
+    </form>
+
+</div>
+
+{% endblock %}
